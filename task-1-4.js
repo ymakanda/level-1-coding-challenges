@@ -14,12 +14,11 @@ eg square(4) should print
  */
 
 function square(num) {
-  var squareArray = [];
-  var result;
-  for (var i = 0; i < num; i++) {
-      result = "";
-    for (var j = 0; j < num; j++) {
-        result += "#";
+  let result;
+  for (let i = 0; i < num; i++) {
+    result = '';
+    for (let j = 0; j < num; j++) {
+      result += '#';
     }
     console.log(result);
   }

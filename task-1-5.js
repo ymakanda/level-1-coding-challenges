@@ -20,20 +20,18 @@ eg triangle(-4) should print
  */
 
 function triangle(num) {
-  var result = "";
-  if(num > 0) {
-    for (var i = 0; i < num; i++) {
-        result += "#";
-        console.log(result);
+  let result = '';
+  if (num > 0) {
+    for (let i = 0; i < num; i++) {
+      result += '#';
+      console.log(result);
     }
-  }
-  else{
-    var num = Math.abs(num); 
-    var result;
-    for (var i = num; i >= 1; i--) {
-      result = "";
-      for (var j = i; j >=1; j--) {
-        result += "#";
+  } else {
+    const numValue = Math.abs(num);
+    for (let i = numValue; i >= 1; i--) {
+      result = '';
+      for (let j = i; j >= 1; j--) {
+        result += '#';
       }
       console.log(result);
     }

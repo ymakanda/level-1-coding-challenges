@@ -12,22 +12,22 @@ time
  */
 
 function longest(strArr) {
-  var maxArr = [];
-  var tlength = 0;
-  for(var i =0; i < strArr.length; i++){
-    if(tlength < strArr[i].length){
+  const maxArr = [];
+  let tlength = 0;
+  for (let i = 0; i < strArr.length; i++) {
+    if (tlength < strArr[i].length) {
       tlength = strArr[i].length;
     }
   }
-  for(var j =0; j < strArr.length; j++){
-    if(strArr[j].length == tlength){
-        maxArr.push(strArr[j]);
+  for (let j = 0; j < strArr.length; j++) {
+    if (strArr[j].length === tlength) {
+      maxArr.push(strArr[j]);
     }
   }
-  if(maxArr.length == 1){
+  if (maxArr.length === 1) {
     console.log(maxArr[0]);
-  }else{
-    console.log( maxArr.join('\r\n'));
+  } else {
+    console.log(maxArr.join('\r\n'));
   }
 }
-longest(["once", "upon", "a", "time"]);
+longest(['once', 'upon', 'a', 'time']);

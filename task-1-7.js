@@ -10,34 +10,12 @@ eg combine([11,22,33], [1,2,3]) should return
 
  */
 
-function combine(arr1,arr2){
-  var l1 = arr1.length;
-  var l2 =arr2.length;
-
-  var l3 = l1 + l2;
-  var arr3 = [l1+l2];
-
-  var i = 0; var j = 0; var k = 0;
-  var m = 0; var r = 0;
-
-  var combineArr = [];
-  l1 < l2 ? r = l1 : r = l2;
-
-  while(m < r)
-  {
-    arr3[k++] = arr1[i++];
-    arr3[k++] = arr2[j++];
-    m++;
+function combine(arr1, arr2) {
+  const combinedList = [];
+  for (let i = 0; i < arr1.length; i++) {
+    combinedList.push(arr1[i]);
+    combinedList.push(arr2[i]);
   }
-  while(k < l3)
-  {
-    l1 < l2 ? arr3[k++] = arr2[j++] : arr3[k++] = arr1[i++];
-  }
-
-  for(var n = 0; n < l3; n++)
-  {
-    combineArr.push(arr3[n]);
-  }
-  return combineArr;
+  return combinedList;
 }
-combine([11,22,33], [1,2,3]);
+combine([11, 22, 33], [1, 2, 3]);
